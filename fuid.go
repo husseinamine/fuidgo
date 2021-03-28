@@ -16,10 +16,6 @@ type Generator struct {
 func pad(number int) string {
     padding := "0000"
 
-    if number >= 9999 {
-	return "9999"
-    }
-
     num := strconv.Itoa(number)
 
     num_len := len(num)
@@ -37,7 +33,7 @@ func timeBlock() string {
 }
 
 func (g *Generator) counterBlock() string {
-    if g.counter > 9999 {
+    if g.counter >= 9999 {
 	g.counter = 0
     }
 

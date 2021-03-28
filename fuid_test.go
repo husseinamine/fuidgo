@@ -1,9 +1,12 @@
 package fuid
 
-import "testing"
+import (
+    "fmt"
+    "testing"
+)
 
 func TestId(t *testing.T) {
     gen := Generator{}
 
-    t.Log(gen.Fuid(), len(gen.Fuid()))
+    fmt.Println(gen.Fuid())
 }
